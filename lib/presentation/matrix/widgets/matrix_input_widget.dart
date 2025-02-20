@@ -30,7 +30,10 @@ class MatrixInputWidget extends StatelessWidget {
         ),
         const SizedBox(width: 10),
         ElevatedButton(
-          onPressed: onRotate,
+          onPressed: () {
+          FocusScope.of(context).unfocus();
+          onRotate();
+          },
           child: const Text('Rotar'),
         ),
       ],
